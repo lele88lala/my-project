@@ -1,0 +1,3 @@
+<template>
+	hehe test
+</template>
