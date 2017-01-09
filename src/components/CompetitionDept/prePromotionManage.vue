@@ -11,11 +11,8 @@
         </div>
     </div>
     <div>
-    	 <div class=pls>
-            选定晋级球队
-         </div>
-    </div>
-    <div>
+    <group>
+    <cell title="选定预晋级球队 (32支)" value="" class="cell-group" v-link="{ path: '/home'}"></cell>  
     <div class="model-fore-dif-t">
         <div class="fore-left-one-dif-t">
 	        <img src="../../assets/login_btn_upload@2x.png">
@@ -23,10 +20,11 @@
 	    <div class="fore-left-t">
             城市传奇队
         </div>
-	    <div class="fore-right-dif-t">
-	        <span><switch title="" :value=true></switch></span>
+	    <div class="fore-right-dif-t pre-fore-right-dif-t">
+	        <span><x-button class="btn" mini type="primary" v-link="{ path: '/selectPreTeam'}">&nbsp;&nbsp;&nbsp;&nbsp;更改&nbsp;&nbsp;&nbsp;&nbsp;</x-button></span>
 	    </div>
     </div>
+    
     <div class="model-fore-dif-t">
         <div class="fore-left-one-dif-t">
             <img src="../../assets/login_btn_upload@2x.png">
@@ -34,8 +32,8 @@
         <div class="fore-left-t">
             城市传奇队
         </div>
-        <div class="fore-right-dif-t">
-            <span><switch title="" :value=true></switch></span>
+        <div class="fore-right-dif-t pre-fore-right-dif-t">
+            <span><x-button class="btn" mini type="primary" v-link="{ path: '/selectPreTeam'}">&nbsp;&nbsp;&nbsp;&nbsp;更改&nbsp;&nbsp;&nbsp;&nbsp;</x-button></span>
         </div>
     </div>
     <div class="model-fore-dif-t">
@@ -45,28 +43,29 @@
         <div class="fore-left-t">
             城市传奇队
         </div>
-        <div class="fore-right-dif-t">
-            <span><switch title="" :value=true></switch></span>
+        <div class="fore-right-dif-t pre-fore-right-dif-t">
+            <span><x-button class="btn" mini type="primary" v-link="{ path: '/selectPreTeam'}">&nbsp;&nbsp;&nbsp;&nbsp;更改&nbsp;&nbsp;&nbsp;&nbsp;</x-button></span>
         </div>
     </div>
-    <div class="model-fore-dif-t">
+    <div class="model-fore-dif-t ">
         <div class="fore-left-one-dif-t">
             <img src="../../assets/login_btn_upload@2x.png">
         </div>
         <div class="fore-left-t">
             城市传奇队
         </div>
-        <div class="fore-right-dif-t">
-            <span><switch title="" :value=true></switch></span>
+        <div class="fore-right-dif-t pre-fore-right-dif-t">
+            <span><x-button class="btn" mini type="primary" v-link="{ path: '/selectPreTeam'}">&nbsp;&nbsp;&nbsp;&nbsp;更改&nbsp;&nbsp;&nbsp;&nbsp;</x-button></span>
         </div>
     </div>
+    </group>
     <div class="modal-float-tip" id="confirmscore" style="display:none">
         <div class="wrapper">
             <div class="tips">确定选定球队晋级?</div>
             <span  class="left-tips" @click="cancels">取消</span><span class="right-tips" @click="makesure">确定</span>
         </div>
     </div>
-    <div class="bottom-red-btn"><span class="yes-btn"  @click="makesurepromotion">确认晋级</span><span class="no-btn" style="display:none">确认晋级</span></div>
+    <div class="bottom-red-btn"><span class="yes-btn"  @click="makesurepromotion">预晋级</span><span class="no-btn" style="display:none">预晋级</span></div>
 </template>
 <script>
 import Group from 'vux/src/components/group'
@@ -110,7 +109,7 @@ export default {
     }
     .model-fore-dif-t{
         background-color:#fff;
-        border-bottom: 1px solid #ececec;
+        border-top: 1px solid #ececec;
         height:45px
     }
     .fore-left-one-dif-t{
@@ -161,5 +160,8 @@ export default {
     .fore-right-dif-t .weui_switch{
         margin-right:8% !important; 
         float:right;
+    }
+    .pre-fore-right-dif-t{
+        margin-top: 8px;
     }
 </style>

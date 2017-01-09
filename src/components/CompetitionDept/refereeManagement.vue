@@ -18,8 +18,15 @@
     暂无裁判人员
 </div>
 <div>
-    <div class=pl>
+    <!-- <div class=pl>
       裁判人员列表
+    </div> -->
+    <div class="artisan-list">裁判人员列表</div>
+    <div class="search_tab_wrapper">
+        <div class="search_tab">
+          <img src="../../assets/icon_search@2x.png"><input type="text" placeholder="搜索编号/名称/手机号">
+        </div>
+        <span class="search-button">搜索</span>
     </div>
     <group title="" class="">
         <div  class="artbottom">
@@ -99,11 +106,11 @@ export default {
     .weui_cells{
       margin-top:10px !important;
     }
-    .er-code{
+    /*.er-code{
       width:25px;
       vertical-align: middle;
       margin-left:8px;
-    }
+    }*/
     .btns{
       font-size:10px;
       background-color:#607cac !important;

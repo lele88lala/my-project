@@ -93,11 +93,11 @@ export default {
     .weui_cells{
       margin-top:10px !important;
     }
-    .er-code{
+    /*.er-code{
       width:25px;
       vertical-align: middle;
       margin-left:8px;
-    }
+    }*/
     .btns{
       font-size:10px;
       background-color:#607cac !important;

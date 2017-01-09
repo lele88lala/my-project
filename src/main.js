@@ -120,6 +120,39 @@ router.map({
   },
   '/matchDetail': {
     component: require('./components/Coupon/matchDetail')
+  },
+  '/refereeTask': {
+    component: require('./components/CompetitionDept/refereeTask')
+  },
+  '/test': {
+    component: require('./components/MatchManage/test')
+  },
+  '/selectArisan': {
+    component: require('./components/CompetitionDept/selectArisan')
+  },
+  '/selectReferee': {
+    component: require('./components/CompetitionDept/selectReferee')
+  },
+  '/selectPreTeam': {
+    component: require('./components/CompetitionDept/selectPreTeam')
+  },
+  '/matchService': {
+    component: require('./components/MatchService/matchService')
+  },
+  '/makeMatch': {
+    component: require('./components/CrmDept/makeMatch')
+  },
+  '/recruitTeam': {
+    component: require('./components/CrmDept/recruitTeam')
+  },
+  '/contactPersonInfo': {
+    component: require('./components/CrmDept/contactPersonInfo')
+  },
+  '/matchTeam': {
+    component: require('./components/CrmDept/matchTeam')
+  },
+  '/teamMatchInfo': {
+    component: require('./components/CrmDept/teamMatchInfo')
   }
 })
 

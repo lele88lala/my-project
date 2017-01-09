@@ -129,7 +129,7 @@ export default {
     .wrap-img {
         position: absolute;
         height: 10px;
-        top: 23%;
+        top: 26%;
         right: 0;
         margin-top: ;
         /*padding: 0.5rem 0;*/
@@ -152,7 +152,7 @@ export default {
     }
     .crm-tips{
         height: 40px;
-        line-height: 42px;
+        line-height: 49px;
         font-size:12px;
         color:#BDBDBD;
         float: right;

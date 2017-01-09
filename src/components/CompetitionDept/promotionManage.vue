@@ -10,10 +10,28 @@
             <span>北京赛区</span>
         </div>
     </div>
-    <div>
+   <!--  <div>
     	 <div class=pls>
             待确认晋级球队
          </div>
+    </div> -->
+    <group></group>
+    <cell title="待确认晋级球队" value="" class="cell-group" v-link="{ path: '/home'}"></cell>  
+    <div class="model-fore-dif">
+        <div class="fore-left-one-dif">
+	        <img src="../../assets/login_btn_upload@2x.png">
+	    </div>
+	    <div class="fore-left-dif">
+	        <div class="fore-top-dif">
+	            <span>城市传奇队</span>
+	        </div>
+	        <div class=" font-little">
+	            <span>已实名球员40</span> &nbsp;&nbsp;<span>已确认球员12</span>
+	        </div>
+	    </div>
+	    <div class="fore-right-dif pre-fore-right-dif-t">
+	        <span></span>
+	    </div>
     </div>
     <div class="model-fore-dif">
         <div class="fore-left-one-dif">
@@ -27,24 +45,8 @@
 	            <span>已实名球员40</span> &nbsp;&nbsp;<span>已确认球员12</span>
 	        </div>
 	    </div>
-	    <div class="fore-right-dif">
-	        <span><switch title="" :value=true></switch></span>
-	    </div>
-    </div>
-    <div class="model-fore-dif">
-        <div class="fore-left-one-dif">
-	        <img src="../../assets/login_btn_upload@2x.png">
-	    </div>
-	    <div class="fore-left-dif">
-	        <div class="fore-top-dif">
-	            <span>城市传奇队</span>
-	        </div>
-	        <div class=" font-little">
-	            <span>已实名球员40</span> &nbsp;&nbsp;<span>已确认球员12</span>
-	        </div>
-	    </div>
-	    <div class="fore-right-dif">
-	        <span><switch title="" :value=false ></switch></span>
+	    <div class="fore-right-dif pre-fore-right-dif-t">
+	        <span></span>
 	    </div>
     </div>
     <div class="model-fore-dif">
@@ -113,7 +115,7 @@ export default {
     }
     .model-fore-dif{
         background-color:#fff;
-        border-bottom: 1px solid #ececec;
+        border-top: 1px solid #ececec;
     }
     .fore-left-one-dif{
     	display:inline-block;

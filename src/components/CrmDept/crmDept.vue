@@ -16,8 +16,9 @@
 </group>
 
 <group title="">
-    <cell title="管理球队" value="管理球队,核对球员" is-link class="cell-group" v-link="{ path: '/manageTeam' }"></cell>
-    <cell title="督促比赛" value="待迎战促成,提醒球队发起约战" is-link class="cell-group" v-link="{ path: '/urgeMatch' }"></cell>
+    <cell title="撮合比赛" value="" is-link class="cell-group" v-link="{ path: '/makeMatch' }"></cell>
+    <cell title="招募球队" value="" is-link class="cell-group" v-link="{ path: '/recruitTeam' }"></cell>
+    <cell title="参赛球队" value="" is-link class="cell-group" v-link="{ path: '/matchTeam' }"></cell>
 
   </group>
 </template>

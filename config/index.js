@@ -19,6 +19,11 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     port: 8080,
-    proxyTable: {}
+    proxyTable: {
+      '/match_mg': {
+        target: 'http://192.168.1.153:8988/galaxy-app-ufball',
+        secure: false
+      }
+    }
   }
 }

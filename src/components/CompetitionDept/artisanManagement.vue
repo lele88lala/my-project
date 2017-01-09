@@ -1,7 +1,7 @@
 <template>
     <div class="common-header">
         <x-header style="background-color:#fff;color:#000" :left-options="{showBack: true}" :left-options="{backText: false}">技术人员管理</x-header>
-        </div>
+    </div>
   <div class="top">
     <div class="head-img"><img class="img-head" src="../../assets/login_btn_upload@2x.png"></div>
     <div class="right-words">
@@ -18,9 +18,16 @@
     暂无技统人员
 </div>
 <div>
-	<div class=pl>
+	<!-- <div class=pl>
 	  技术统计人员列表
-	</div>
+	</div> -->
+  <div class="artisan-list">技术统计人员列表</div>
+  <div class="search_tab_wrapper">
+      <div class="search_tab">
+          <img src="../../assets/icon_search@2x.png"><input type="text" placeholder="搜索编号/名称/手机号">
+      </div>
+        <span class="search-button">搜索</span>
+  </div>
 	<group title="" class="">
 	    <div  class="artbottom">
 		        <div class="people">
@@ -100,7 +107,7 @@ export default {
       margin-top:10px !important;
     }
     .er-code{
-      width:25px;
+      width:20px;
       vertical-align: middle;
       margin-left:8px;
     }
@@ -123,5 +130,11 @@ export default {
     }
     .del-but{
     	background-color:#607cac !important;
+    }
+    .artisan-list{
+      text-align: center;
+      font-size:13px;
+      color:#9f9f9f;
+      padding-top:10px;
     }
 </style>

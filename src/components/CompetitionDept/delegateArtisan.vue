@@ -2,7 +2,7 @@
 <div class="common-header">
         <x-header style="background-color:#fff;color:#000" :left-options="{showBack: true}" :left-options="{backText: false}">选择服务人员</x-header>
         </div>
-	<div class="model">
+	<div class="model artisan-model">
 		    <div class="left">
 		        <div class="tops">
 		            <img src="../../assets/login_btn_upload@2x.png">
@@ -12,40 +12,63 @@
 		            <img src="../../assets/login_btn_upload@2x.png">
 		            <span>传奇队</span>
 		        </div>
+                <div class="tops tops-b">
+                    <img class="time-img" src="../../assets/gauntlet_icon_time@2x.png">
+                    <span class="time">12:00 - 13:00</span>
+                </div>
+                <div class="tops tops-b">
+                    <img class="time-img" src="../../assets/nav_btn_address@2x.png">
+                    <span class="time">城市队主场馆</span>
+                </div>
 		    </div>
-		    <div class="mid">
+		    <!-- <div class="mid">
 		         <span class="time">12:00 - 13:00</span>
 		         <span class="match-space">城市队主场馆</span>
-		    </div>
+		    </div> -->
 		    <div class="right">
 		       
 		    </div>
 	</div>
-	<div class="j-p">
+	<!-- <div class="j-p">
 		<span>已委派技统人员: 003 李某某</span>
 	</div>
 	<div class="c-p">
 		<span>已委派裁判人员: 003 李某某</span>
-	</div>
-    <div>
+	</div> -->
+    <!-- <div>
 	    <div class="slider-wrapper">
 	        <span class="slider"><span  class="left-b-words" @click="leftonc">技术统计人员</span><span class="left-words" id="leftbwords">技术统计人员</span><span  class="right-b-words" @click="rightonc">裁判人员</span><span id="rightbwords" class="right-words">裁判人员</span></span>
 	    </div>
-    </div>
-    <div class="bottom-wrapper">
+    </div> -->
+    <div class="prop-tips">需委派技统3人</div>
+    <cell title="技统人员" value="选择" is-link class="cell-group" v-link="{ path: '/manageMatch' ,query:{divisionId:divisionId,token:token,type:1}}"></cell>
+    <div class="no-delegate">未委派</div>
+    <div class="prop-tips">需委派裁判1人</div>
+    <cell title="裁判人员" value="选择" is-link class="cell-group" v-link="{ path: '/manageMatch' ,query:{divisionId:divisionId,token:token,type:1}}"></cell>
+    <div class="no-delegate">未委派</div>
+
+    <div class="prop-tips">需委派技统1人</div>
+    <cell title="技统人员" value="选择" is-link class="cell-group" v-link="{ path: '/selectArisan' ,query:{divisionId:divisionId,token:token,type:1}}"></cell>
+    <div class="bottom-wrapper delegate-bottom-wrapper">
         <div  class="artbottom">
 	        <div class="people">
 	            <div class="left"><div><span>006</span><span> 张小帅</span></div><div><span>手机号:</span><span>13029398103</span></div></div>
 	            <div class="right"><x-button class="btn" mini type="primary" v-link="{ path: '/delegateArtisan'}" @click="confirms">&nbsp;&nbsp;&nbsp;&nbsp;改派&nbsp;&nbsp;&nbsp;&nbsp; </x-button></div>
 	        </div>
         </div>
+    </div>
+
+    <div class="prop-tips">需委派裁判1人</div>
+    <cell title="裁判人员" value="选择" is-link class="cell-group" v-link="{ path: '/selectReferee' ,query:{divisionId:divisionId,token:token,type:1}}"></cell>
+    <div class="bottom-wrapper delegate-bottom-wrapper">
         <div  class="artbottom">
-	        <div class="people">
-	            <div class="left"><div><span>006</span><span> 张小帅</span></div><div><span>手机号:</span><span>13029398103</span></div></div>
-	            <div class="right"><x-button class="btn" mini type="primary" v-link="{ path: '/delegateArtisan'}" @click="confirms">&nbsp;&nbsp;&nbsp;&nbsp;改派&nbsp;&nbsp;&nbsp;&nbsp; </x-button></div>
-	        </div>
+            <div class="people">
+                <div class="left"><div><span>006</span><span> 张小帅</span></div><div><span>手机号:</span><span>13029398103</span></div></div>
+                <div class="right"><x-button class="btn" mini type="primary" v-link="{ path: '/delegateArtisan'}" @click="confirms">&nbsp;&nbsp;&nbsp;&nbsp;改派&nbsp;&nbsp;&nbsp;&nbsp; </x-button></div>
+            </div>
         </div>
     </div>
+
     <div class="modal-float-tip-conf" style="display:none" id="makeconfirm">
 	    <div class="modal-float-tip-conf-wrapper">
 	        <div class="top-tips">007号技统人员此时段已有任务安排</div>
@@ -223,5 +246,30 @@ export default {
     .bot-tips{
         display:inline-block;
         text-align: center
+    }
+    .artisan-model{
+        height:110px !important;
+    }
+    .prop-tips{
+        text-align: center;
+        color:#9f9f9f;
+        padding-top:10px;
+        padding-bottom:7px;
+        font-size:13px;
+    }
+    .no-delegate{
+        text-align: center;
+        background-color:#fff;
+        padding:20px 0;
+        color:#9f9f9f;
+        border-top:1px solid #ececec;
+        font-size:12px;
+    }
+    .delegate-bottom-wrapper{
+        margin-top:0px !important;
+    }
+    .delegate-bottom-wrapper .artbottom{
+        border-bottom:0px solid #fff !important;
+        border-top:1px solid #ececec;
     }
 </style>

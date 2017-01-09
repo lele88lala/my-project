@@ -5,9 +5,9 @@
   <div class="top">
     <div class="head-img"><img class="img-head" src="../../assets/login_btn_upload@2x.png"></div>
     <div class="right-words">
-        <span>红牛城市传奇争霸赛-公开组</span>
-        <span>2016/09/20-2016/09/24</span>
-        <span>北京赛区</span>
+        <span>{{matchName}}-{{groupName}}</span>
+        <span>{{beginD}}- {{endD}}</span>
+        <span>{{divsionName}}</span>
     </div>
 </div>
 <group>
@@ -16,11 +16,15 @@
 </group>
 
 <group title="">
-    <cell title="管理比赛" value="" is-link class="cell-group" v-link="{ path: '/manageMatch' }"></cell>
-    <cell title="管理技统" :value=m+n+'场' is-link class="cell-group" v-link="{ path: '/manageArtisan' }"></cell>
-    <cell title="确认比分" value="待确认比赛4场" is-link class="cell-group" v-link="{ path: '/confirmScore'}"></cell>
-    <cell title="管理晋级" value="待确认球队4支" is-link class="cell-group" v-link="{ path: '/prePromotinManage'}"></cell>
+    <cell title="管理比赛" value="" is-link class="cell-group" v-link="{ path: '/manageMatch' ,query:{divisionId:divisionId,token:token,type:1}}"></cell>
+    <cell title="赛场服务" value="" is-link class="cell-group" v-link="{ path: '/manageArtisan',query:{divisionId:divisionId,token:token,type:2} }"></cell>
+    <cell title="确认比分" value="" is-link class="cell-group" v-link="{ path: '/confirmScore',query:{divisionId:divisionId,token:token,type:3}}"></cell>
+    <cell title="管理晋级" value="" is-link class="cell-group" v-link="{ path: '/prePromotinManage'}"></cell>
 
+  </group>
+  <group>
+    <cell title="技统人员管理" value="" is-link class="cell-group" v-link="{ path: '/artisanManagement' ,query:{divisionId:divisionId,token:token,type:1}}"></cell>
+    <cell title="裁判人员管理" value="" is-link class="cell-group" v-link="{ path: '/refereeManagement',query:{divisionId:divisionId,token:token,type:2} }"></cell>
   </group>
 </template>
 
@@ -29,6 +33,10 @@ import Group from 'vux/src/components/group'
 import Cell from 'vux/src/components/cell'
 import xbutton from 'vux/src/components'
 import XHeader from 'vux/src/components/x-header'
+var Vue = require('vue')
+var VueResource = require('vue-resource')
+
+Vue.use(VueResource)
 export default {
   components: {
     Group,
@@ -38,12 +46,26 @@ export default {
   },
   data () {
     return {
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
       n: 4,
-      m: '待委派比赛'
+      m: '待委派比赛',
+      token: '',
+      divisionId: '',
+      matchName: '',
+      groupName: '',
+      beginD: '',
+      endD: '',
+      divsionName: ''
     }
+  },
+  ready () {
+    var id = this.$route.query
+    this.token = id.token
+    this.divisionId = id.divisionId
+    this.matchName = id.matchName
+    this.groupName = id.groupName
+    this.beginD = id.beginD
+    this.endD = id.endD
+    this.divsionName = id.divsionName
   }
 }
 </script>

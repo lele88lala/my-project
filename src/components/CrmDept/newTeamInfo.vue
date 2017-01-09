@@ -63,7 +63,7 @@ export default {
 
 .new-team-middle input {
     margin-left: 5px;
-    padding: 6px 2px;
+    padding: 10px 2px;
     font-size: 12px;
     line-height: 1.4rem;
     width:85%;
